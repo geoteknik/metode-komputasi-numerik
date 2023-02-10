@@ -1,85 +1,11 @@
 ---
 id: about
 name: About
-heading: This First Heading
-subheading: Will Catch Your Eye
+heading: Raden Harya Dananjaya
+subheading: Department of Civil Engineering<br>Universitas Sebelas Maret
 image: "http://placehold.it/500x500"
 ---
-
  
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      
-      <img class="avatar avatar-circle" src="/authors/admin/avatar_hufbc59af7fa4daaade928def6512ca2ba_407055_270x270_fill_lanczos_center_3.png" alt="Mahmoud Zidan">
-      
-
-      <div class="portrait-title">
-        <h2>Mahmoud Zidan</h2>
-        
-
-        
-      </div>
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-        <li>
-          <a href="mailto:mahmud_zz@msn.com" aria-label="envelope">
-            <i class="fas fa-envelope big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://www.linkedin.com/in/mahmudzz/" target="_blank" rel="noopener" aria-label="linkedin">
-            <i class="fab fa-linkedin big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://github.com/zidanmahmoud" target="_blank" rel="noopener" aria-label="github">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8">
-
     
     <h1>About</h1>
 
@@ -92,36 +18,4 @@ image: "http://placehold.it/500x500"
   <i class="fas fa-download  pr-1 fa-fw"></i> <a href="/uploads/cv.pdf" target="_blank">Resumé</a> -->
 
     </div>
-
-    <div class="row">
-
-      
-
-      
-      <div class="col-md-7">
-        <div class="section-subheading">Education</div>
-        <ul class="ul-edu fa-ul mb-0">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">MSc in Computational Mechanics, 2020</p>
-              <p class="institution">Technical University of Munich</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">BSc in Civil Engineering, 2017</p>
-              <p class="institution">Kuwait University</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-    </div>
-  </div>
  
