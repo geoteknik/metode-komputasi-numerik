@@ -3,9 +3,15 @@
     <hr id='{{ feature.id }}'>
 
     <section>
-      <img class='{% cycle 'pull-right', 'pull-left' %}' src='{{ feature.image }}'>
-      <h2>{{ feature.heading }}</h2><h3>{{ feature.subheading }}</h3>
-      <div class='lead'>{{ feature.content }}</div>
+      <div class='lead'>
+        {% cycle '<h2>feature.heading</h2><h3>feature.subheading</h3>', 'feature.content' %}
+        
+        
+      </div>
+      
+      <div class='lead'>
+        {% cycle '<h2>feature.heading</h2><h3>feature.subheading</h3>', 'feature.content' %}
+      </div>
     </section>
   {% endfor %}
 
