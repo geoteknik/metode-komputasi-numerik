@@ -7,8 +7,7 @@ image: "http://placehold.it/500x500"
 sidecontent: |
     <h1> Raden Harya Dananjaya </h1>
     <h2> Department of Civil Engineering </h2>
-    <h2> Universitas Sebelas Maret </h2>
-ncontent: 2
+    <h2> Universitas Sebelas Maret </h2> 
 ---
  
 <div class="article-style"> 
