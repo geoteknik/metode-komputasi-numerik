@@ -5,7 +5,7 @@
     <section id='{{ feature.id }}' class="home-section {% cycle 'group bg': '', 'gray-200' %}">
       <div class="container row-fluid">
         
-        <div class='{% cycle 'group 2': 'col-lg-5', 'col-lg-7' %} lead '> 
+        <div class='{% cycle 'group 2': 'col-lg-4', 'col-lg-8' %} lead '> 
           {% if thecycle1 == 'odd' %}
             {% if feature.sidecontent %}
               {{feature.sidecontent}}
@@ -13,16 +13,20 @@
               <h2>{{feature.heading}}</h2><h3>{{feature.subheading}}</h3> 
             {% endif %}
           {% else %} 
-                {{ feature.content }}   
+            <div class="text-justify">
+              {{ feature.content }}   
+            </div> 
           {% endif %}
         </div>
         
-        <div class='{% cycle 'group 3': 'col-lg-7', 'col-lg-5' %} lead '>   
+        <div class='{% cycle 'group 3': 'col-lg-8', 'col-lg-4' %} lead '>   
           {% if thecycle1 == 'odd' %}  
-              {{ feature.content }}   
+            <div class="text-justify">
+              {{ feature.content }}  
+            </div>  
           {% else %}
             {% if feature.sidecontent %}
-              {{ feature.sidecontent }} 
+             {{ feature.sidecontent }} 
             {% else %}
                 <h2>{{feature.heading}}</h2><h3>{{feature.subheading}}</h3> 
             {% endif %}

@@ -24,7 +24,7 @@ skill:
 ---
 
 <div class="row ">
-    {% for i in (0..7) %}
+    {% for i in (0..6) %}
     <div class="col-lg-3 item-center">
         <img src="{{ page.images[i] }}" class="img-skill "> 
         <div class="text-center">
