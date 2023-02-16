@@ -11,4 +11,5 @@ sidecontent: |
     </div>
 ---
 # About me 
-I am a Lecturer in Universitas Sebelas Maret, Indonesia. I graduated from Kyushu Unversity in Japan. My research interest is in computational geotechnics. I have developed knowledge and interest in software development, Finite Element simulations, Computational Fluid Analysis, and Engineering applications.
+I am a Lecturer in Universitas Sebelas Maret, Indonesia. I graduated from Kyushu Unversity in Japan. My research interest is in computational geotechnics. I have developed knowledge and interest in geotechncis, earthquake engineering, disaster mitigation (such as landslide, slope failure), software development, numerical model, and computational mechanics.
+
