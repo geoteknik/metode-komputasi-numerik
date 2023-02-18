@@ -1,7 +1,7 @@
 ---
-id: Teaching
-name: Teaching
-heading: Teaching
+id: Blog Posts
+name: Blog Posts
+heading: Blog Posts
 subheading: 
 
 ---
