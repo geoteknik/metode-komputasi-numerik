@@ -2,6 +2,15 @@ title: Portofolio
 description: A portofolio of Raden Harya Dananjaya
 sitename: Raden Harya Dananjaya
 baseurl: '/onepage_porto'
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 sass:
   sass_dir: /assets/_sass
   style: :compressed
