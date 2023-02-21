@@ -1,7 +1,7 @@
-title: Portofolio
-description: A portofolio of Raden Harya Dananjaya
-sitename: Raden Harya Dananjaya
-baseurl: '/onepage_porto'
+title: Metode Komputasi Numerik
+description: Materi kuliah Metode Komputasi Numerik
+sitename: Metode Komputasi Numerik
+baseurl: '/metode-komputasi-numerik'
 
 markdown: kramdown
 highlighter: rouge
