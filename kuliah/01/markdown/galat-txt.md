@@ -10,8 +10,25 @@ Galat numerik (*numerical error*) adalah ketidaktepatan atau penyimpangan dari n
 
 4. Galat konvergensi: Ini terjadi ketika terdapat perbedaan antara solusi yang mencapai konvegen sepenuhnya dengan solusi yang baru mencapai konvergensi sebagian. Hal ini dapat terjadi karena user menghentikan iterasi sebelum solusi mencapai konvergensi, atau user memilih nilai toleransi galat yang terlalu besar.
 
-## Jenis berdasarkan pengukuran galat
-Ada dua jenis galat pada metode numerik, yaitu galat absolut dan galat relatif. Galat absolut merupakan perbedaan antara nilai hasil perhitungan yang diperoleh melalui metode numerik dengan nilai sebenarnya dari hasil tersebut. Sedangkan galat relatif adalah perbandingan antara galat absolut dan nilai sebenarnya dari hasil tersebut.
+## Jenis galat berdasarkan pengukuran
+Karena definisi galat adalah perbedaan nilai estimasi dengan nilai sesungguhnya, maka galat bisa kita tulis dalam rumus:
+$$ e_t = a - \hat{a} $$
+
+Karena yang kita ukur adalah perbedaan antara nilai sesungguhnya (*a*) dan nilai estimasi ($ \hat{a} $), maka galat atau kesalahan ini kita sebut sebagi *true error* ($a_t$). Dibanyak tempat, kita ingin mengukur kesalahan terhadap nilai sebenarnya, yaitu:
+
+$$ \epsilon_t = {a - \hat{a} \over a} $$ 
+
+atau
+
+$$ \epsilon_t = {a - \hat{a} \over a} 100\% $$  
+
+kesalahan ini disebut *true relative error* ($\epsilon_t$). Pada banyak kasus nilai eksak tidak bisa diperoleh, sehingga perlu cara lain untuk mengukur galat. Biasanya pada kasus ini (nilai eksak tidak bisa diperoleh), nilai pendekatan diperoleh dengan cara iterasi hingga solusi mencapai konvergen. Kesalahan/galat pada tiap-tiap iterasi disebut approximation relative  error ($\epsilon_a$) dan bisa dihitung menggunakan:
+
+$$ \epsilon_a = {\hat{a}^{i} - \hat{a}^{i-1} \over \hat{a}^i} 100\% $$  
+
+dengan *i* adalah iterasi saat ini dan *i-1* dalah iterasi sebelumnya. Kesalahan-kesalahan di atas bisa bernilai negatif jika nilai eksak lebih kecil dari nilai pendekatan atau nilai iterasi saat ini lebih kecil dari nilai iterasi sebelumnya. Untuk menghindari nilai negatif biasanya digunakan nilai absolut, yaitu $\lvert \epsilon_t \rvert$ atau $\lvert{\epsilon_a}\rvert$. Jika solusi diperoleh dengan cara iterasi, biasa iterasi akan dihentikan jika nilai absolutnya lebih kecil dari nilai toleransi ($\epsilon_s$).
+
+$$ \lvert \epsilon_a \rvert \le \epsilon_s $$
 
 ## Cara mengurangi galat
 Galat numerik dapat diminimalkan dengan menggunakan metode numerik yang cocok untuk masalah yang dipecahkan, menggunakan aritmetika presisi tinggi, meningkatkan jumlah term yang digunakan dalam aproksimasi, atau dengan menggunakan teknik analisis galat untuk menentukan sumber-sumber galat dan memperbaikinya. Penting untuk menyadari galat numerik dan mengambil langkah-langkah untuk meminimalkannya, karena galat ini dapat menyebabkan ketidakakuratan yang signifikan pada hasil akhir.
