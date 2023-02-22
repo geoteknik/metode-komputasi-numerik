@@ -58,3 +58,21 @@ html {
     display: flex; 
     flex-direction: column;
 } 
+
+table {
+    margin: auto; 
+    border: 1px solid #ddd; 
+    // border-top: 1px solid #666; 
+    // border-bottom: 1px solid #666; 
+ }
+ table thead th { 
+    border-bottom: 1px solid #aaa; 
+    border-top: 1px solid #aaa; 
+}
+ th, td { padding: 5px; }
+ tr:nth-child(even) { background: #eee; }
+
+ table, th, td {
+    border-left: none;
+    border-right: none;
+  }
