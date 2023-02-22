@@ -162,6 +162,32 @@ Pada Contoh 1 dan 2 kita mengestimasi persamaan dengan $\Delta x = 1$, seandainy
 &nbsp;
 
 
+```python
+dx = [Dx/2**i for i in range(0,10)] # nilai x kita perkecil menjadi separuh pada tiap entry list --> dx = [1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0.0078125, 0.00390625, 0.001953125]
+dx = np.array(dx) # merubah python list menjadi numpy array untuk keperluan numerik
+x0 = 1
+x1 = x0+dx  # x1 = x0 + dx = [1.5, 1.25, 1.125, 1.0625, 1.03125, 1.015625, 1.0078125, 1.00390625, 1.001953125]
+
+# y eksak
+y_e = -0.2*x1**2 + 2*x1 
+
+# orde ke-0
+fx0 =  -0.2*x0**2 + 2* x0  #f(x0)
+y_0 = [fx0 for i in dx]
+y_0 = np.array(y_0)
+e_0 = abs(y_e-y_0)*100/y_e 
+
+
+# orde ke-1
+f1x0 = -0.4*x0 + 2 #f'(x0)
+# list atau array nilai estimasi y dengan deret Taylor orde ke-1
+y_1 = y_0 + f1x0 * dx 
+y_1 = np.array(y_1)
+e_1 = abs(y_e-y_1)*100/y_e 
+
+```
+
+
 
 
 <div>
@@ -183,8 +209,8 @@ Pada Contoh 1 dan 2 kita mengestimasi persamaan dengan $\Delta x = 1$, seandainy
     <tr style="text-align: right;">
       <th></th>
       <th>dx</th>
-      <th>galat 0</th>
-      <th>galat 1</th>
+      <th>e_0</th>
+      <th>e_1</th>
     </tr>
   </thead>
   <tbody>
@@ -256,7 +282,7 @@ Pada Contoh 1 dan 2 kita mengestimasi persamaan dengan $\Delta x = 1$, seandainy
 
 &nbsp;
 
-Pada tabel di atas, galat 0 dan 1 menunjukkan galat pada deret taylor orde ke-0 dan ke-1 secara berturut-turut. jia kita perhatikan, saat dx di perkecil menajadi setengah, maka galat pada deret Taylor orde ke-0 akan mengecil menjadi $\pm $ separuhnya, sedangkan  pada deret Taylor orde ke-1 akan mengecil menjadi $\pm$ 0.25. Hal ini sesuai dengan Persamaan 4 dan 5, karena yang paling berpengaruh pada galat adalah pangkat pada $\Delta x$ suku pertamanya. Sedangkan ketidak tepatan pengecilan galat menjadi separuh dan seperempat adalah kontribusi variabal pada suku pertama selain $\Delta x$ dan suku-suku tidak hingga setelahnya.  
+Pada tabel di atas, e_0 dan e_1 menunjukkan galat pada deret taylor orde ke-0 dan ke-1 secara berturut-turut. jia kita perhatikan, saat dx di perkecil menajadi setengah, maka galat pada deret Taylor orde ke-0 akan mengecil menjadi $\pm $ separuhnya, sedangkan  pada deret Taylor orde ke-1 akan mengecil menjadi $\pm$ 0.25. Hal ini sesuai dengan Persamaan 4 dan 5, karena yang paling berpengaruh pada galat adalah pangkat pada $\Delta x$ suku pertamanya. Sedangkan ketidak tepatan pengecilan galat menjadi separuh dan seperempat adalah kontribusi variabal pada suku pertama selain $\Delta x$ dan suku-suku tidak hingga setelahnya.  
 
 ## Kesimpulan
 
