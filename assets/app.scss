@@ -3,11 +3,11 @@ layout: compress
 ---
 
 @charset 'utf-8';
-@import 'bootstrap';
+@import "bootstrap-5.3.0-alpha1/bootstrap";
+// @import 'bootstrap';
 
 @import "sass-code-highlight/monokai";
 @import 'mycss';
-@import 'layout';
-@import 'nav';
-@import 'header';
-@import 'main';
+@import 'layout'; 
+// @import 'header';
+// @import 'main';
