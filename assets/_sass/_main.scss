@@ -3,8 +3,8 @@ main {
   section { overflow: hidden; }
 
   img {
-    @extend .img-circle;
-    @extend .img-responsive;
+    @extend .img-circle !optional;
+    @extend .img-responsive !optional;
 
     &.pull-left {  margin-right: 40px;  }
     &.pull-right {  margin-left: 40px;  }

@@ -1,40 +1,44 @@
-<main>
+<!-- <main> -->
   {% for feature in site.features %}
     <!-- <hr > -->
     {% capture thecycle1 %}{% cycle 'group 1': 'odd', 'even' %}{% endcapture %}
-    <section id='{{ feature.id }}' class="home-section {% cycle 'group bg': '', 'gray-200' %}">
-      <div class="container row-fluid">
-        
-        <div class='{% cycle 'group 2': 'col-sm-4', 'col-sm-8' %} lead '> 
-          {% if thecycle1 == 'odd' %}
-            {% if feature.sidecontent %}
-              {{feature.sidecontent}}
-            {% else %}
-              <h1>{{feature.heading}}</h1><h2>{{feature.subheading}}</h2> 
-            {% endif %}
-          {% else %} 
-            <div class="text-justify">
-              {{ feature.content }}   
-            </div> 
-          {% endif %}
-        </div>
-        
-        <div class='{% cycle 'group 3': 'col-sm-8', 'col-sm-4' %} lead '>   
-          {% if thecycle1 == 'odd' %}  
-            <div class="text-justify">
-              {{ feature.content }}  
-            </div>  
-          {% else %}
-            {% if feature.sidecontent %}
-             {{ feature.sidecontent }} 
-            {% else %}
+    <section id='{{ feature.id }}' class="home-section {% cycle 'group bg': '', 'bg-light' %}">
+      <div class="container">
+        <div class="row">
+  
+          <div class='{% cycle 'group 2': 'col-sm-4', 'col-sm-8' %} lead '> 
+            {% if thecycle1 == 'odd' %}
+              {% if feature.sidecontent %}
+                {{feature.sidecontent}}
+              {% else %}
                 <h1>{{feature.heading}}</h1><h2>{{feature.subheading}}</h2> 
+              {% endif %}
+            {% else %} 
+              <div class="text-justify">
+                {{ feature.content }}   
+              </div> 
             {% endif %}
-          {% endif %}
+          </div>
+          
+          <div class='{% cycle 'group 3': 'col-sm-8', 'col-sm-4' %} lead '>   
+            {% if thecycle1 == 'odd' %}  
+              <div class="text-justify">
+                {{ feature.content }}  
+              </div>  
+            {% else %}
+              {% if feature.sidecontent %}
+              {{ feature.sidecontent }} 
+              {% else %}
+                  <h1>{{feature.heading}}</h1><h2>{{feature.subheading}}</h2> 
+              {% endif %}
+            {% endif %}
+          </div>
+
         </div>
+        
       </div>
     </section>
   {% endfor %}
 
 <!--   <hr> -->
-</main>
+<!-- </main> -->
