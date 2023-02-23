@@ -5,16 +5,15 @@ heading: Materi
 subheading: 
 
 ---
+
 <ul>
-  {% for article in site.pages %}
-    {% if article.identifier == 'page' %}
-      <li>
-        <a href="{{ site.baseurl}}{{article.url }}">
-          {{ article.title }}
-        </a>
-      </li>
-    {% endif %}
-  {% endfor %}
+{% for article in site.pages %}
+  {% if article.identifier == 'page' %}
+      <a class="my-link" href="{{ site.baseurl}}{{article.url }}">
+        {{ article.title }}
+      </a>
+  {% endif %}
+{% endfor %} 
 </ul>
 
 
