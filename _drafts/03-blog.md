@@ -6,10 +6,8 @@ subheading:
 
 ---
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl}}{{post.url }}">{{ post.title }}</a>
-    </li>
+  {% for post in site.posts %} 
+      <a class="my-link" href="{{ site.baseurl}}{{post.url }}">{{ post.title }}</a> 
   {% endfor %}
 </ul>
 
