@@ -6,7 +6,7 @@ subheading:
 image: "http://placehold.it/500x500"
 sidecontent: |
     <div class="item-center text-center">
-        <img src="assets/media/pic/img_avatar.png" alt="Avatar" class="avatar square-300">
+        <img src="assets/media/pic/img_avatar.png" alt="Avatar" class="avatar square-300 rounded-circle">
 
         <a class="my-link" href="/dananjaya/"><h1> Raden Harya Dananjaya </h1></a>
         
