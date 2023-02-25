@@ -1,5 +1,4 @@
-# Deret Taylor
-## Pengenalan
+## Pendahuluan Deret Taylor
 Deret Taylor adalah suatu cara untuk mengekspresikan fungsi matematika sebagai jumlah deret tak berhingga dari suku-suku yang ditentukan berdasarkan turunan fungsi tersebut di suatu titik. Misalkan kita ingin mengestimasi fungsi eksponensial $f(x) = e^x$ di sekitar titik $x=x_0$. Kita perlu menentukan turunan ke-n dari fungsi tersebut dan mengevaluasinya pada titik $x_0$. Deret Taylor sangat berguna dalam matematika dan banyak digunakan dalam bidang sains dan rekayasa. Deret Taylor pertama kali diperkenalkan oleh matematikawan Inggris, Brook Taylor, pada abad ke-18.
 
 Deret Taylor terdiri dari dua jenis, yakni Deret Taylor dan Deret McLaurin. Deret Taylor adalah deret yang digunakan untuk mengekspresikan fungsi pada titik tertentu yang tidak harus nol. Sedangkan Deret McLaurin adalah kasus khusus dari Deret Taylor, di mana titik yang digunakan adalah nol. Dalam artikel ini, kita akan membahas Deret Taylor secara umum.
@@ -7,11 +6,13 @@ Deret Taylor terdiri dari dua jenis, yakni Deret Taylor dan Deret McLaurin. Dere
 ## Bentuk Umum
 Bentuk umum dari Deret Taylor adalah sebagai berikut:
 
-$$f\left(x+\varDelta x\right)=f\left(x\right)+\dfrac{\varDelta x}{1!}f'\left(x\right)+\dfrac{\varDelta x^{2}}{2!}f''\left(x\right)+\cdots+\dfrac{\varDelta x^{n}}{n!}f^{\left(n\right)}\left(x\right)+\cdots \tag{1a}$$
+
+$$f\left(x+\varDelta x\right)=f\left(x\right)+\dfrac{\varDelta x}{1!}f'\left(x\right)+\dfrac{\varDelta x^{2}}{2!}f''\left(x\right)+\cdots+\dfrac{\varDelta x^{n}}{n!}f^{\left(n\right)}\left(x\right)+\cdots \label{eq:deret-taylor-a}
+$$
 
 atau 
 
-$$ f(x+\Delta x) = \sum^{\infty}_{n=0} {f^{(n)}(x)\over n!} (\Delta x)^n \tag{1b}$$  
+$$ f(x+\Delta x) = \sum^{\infty}_{n=0} {f^{(n)}(x)\over n!} (\Delta x)^n \label{eq:deret-taylor-b}$$  
  
 di mana $f^{(n)}(x)$ adalah turunan ke-$n$ dari fungsi $f(x)$ yang dievaluasi pada titik $x$. Dalam kata lain, persamaan di atas dapat digunakan untuk mengekspresikan nilai dari fungsi $f(x)$ di sekitar titik $x$ sebagai jumlah tak berhingga dari suku-suku deret, dengan setiap suku didasarkan pada nilai turunan fungsi tersebut di titik $x$.
 
@@ -20,13 +21,13 @@ di mana $f^{(n)}(x)$ adalah turunan ke-$n$ dari fungsi $f(x)$ yang dievaluasi pa
 ## Contoh 1
 Mari kita lihat contoh penggunaan Deret Taylor. Misalnya kita ingin mengestimasi kecepatan suatu sungai. Seandainya kecepatan sebuah sungai memenuhi persamaan: 
 
-$$ f(x) = -0.2 x^2+2x \tag{2} $$ 
+$$ f(x) = -0.2 x^2+2x \label{eq:contoh-v-sungai} $$ 
 
-Lalu kita mengukur kecepatan di titik $x = 1$. Dari Persamaan 2, didapatkan f(1) = 1.8 m/s. Seandainya data yang kita punya hanya kecepatan di titik $ x = 1 $ dan Persamaan 2, dan kita ingin mengestimasi kecepatan pada x = 2, kita bisa menggunakan deret Taylor untuk mengestimasinya.
+Lalu kita mengukur kecepatan di titik $x = 1$. Dari Persamaan \ref{eq:contoh-v-sungai}, didapatkan f(1) = 1.8 m/s. Seandainya data yang kita punya hanya kecepatan di titik $ x = 1 $ dan Persamaan \ref{eq:contoh-v-sungai}, dan kita ingin mengestimasi kecepatan pada x = 2, kita bisa menggunakan deret Taylor untuk mengestimasinya.
 
 
 
-Dengan $ x = 1, \Delta x = 1, f(1) = 1.8, f'(1) = 1.6, f"(1) = -0.4, f^{(3)} = 0 $, karena setelah turunan ke-3, nilai turunannya adalah nol, maka kita hentikan penurunannya. Dari Persamaan (1) kita dapatkan:
+Dengan $ x = 1, \Delta x = 1, f(1) = 1.8, f'(1) = 1.6, f"(1) = -0.4, f^{(3)} = 0 $, karena setelah turunan ke-3, nilai turunannya adalah nol, maka kita hentikan penurunannya. Dari Persamaan \ref{eq:deret-taylor-b} kita dapatkan:
 
 $$ f(1 + 1) = f(2) = f(1) + f'(1) \Delta x + {f''(1) \Delta x^2 \over 2 !} = 3.2$$
 
@@ -35,32 +36,32 @@ Dari hasil estimasi kecepatan pada titik $ x = 2 $, hasil dari deret Taylor sama
 ---
 
 
-Mungkin kita berpikir kalau kita bisa menggunakan persamaan di Contoh 1 untuk menghitung nilai eksak-nya kenapa harus menggunakan deret Taylor? Sayangnya pada banyak kondisi kita tidak tahu persis persamaan kecepatan melintang sepanjang lebar selokan, kita hanya tahu nilai kecepatannya dan turunan (misalnya) pertama atau keduanya, sehingga kita butuh deret Taylor. 
+Mungkin kita berpikir kalau kita bisa menggunakan Persamaan \ref{eq:contoh-v-sungai} untuk menghitung nilai eksak-nya kenapa harus menggunakan deret Taylor? Sayangnya pada banyak kondisi kita tidak tahu persis persamaan kecepatan melintang sepanjang lebar selokan, kita hanya tahu nilai kecepatannya dan turunan (misalnya) pertama atau keduanya, sehingga kita butuh deret Taylor. 
 
-Contoh lainnya misalnya kita ingin mengetahui perubahan posisi pada sebuah benda bergerak tanpa mengetahui persamaan geraknya. Kita hanya bisa mengukur posisi $x_0$, kecepatan (turunan pertama posisi terhadap waktu), dan percepatan (turunan kedua) saat $ t = 1 $. Kita ingin mengestimasi posisi benda bergerak tersebut saat $ t = 2 $, maka kita butuh deret Taylor, karena kita tidak mempunyai persamaan geraknya. 
+Contoh lain kondisi kita tidak mengetahui persamaan tetapi mengetahui keadaan pada suatu posisi adalah ketika kita ingin mengetahui perubahan posisi pada sebuah benda bergerak tanpa mengetahui persamaan geraknya. Kita hanya bisa mengukur posisi $x_0$, kecepatan (turunan pertama posisi terhadap waktu), dan percepatan (turunan kedua) saat $ t = 1 $. Kita ingin mengestimasi posisi benda bergerak tersebut saat $ t = 2 $, maka kita butuh deret Taylor, karena kita tidak mempunyai persamaan geraknya. 
 
 
 ## Orde Deret Taylor
 
-Jika kita hanya menggunakan suku pertama pada Persamaan 1, maka deret Taylor yang kita gunakan adalah deret Taylor orde 0, dan Persamaan 1 menjadi:
+Jika kita hanya menggunakan suku pertama pada Persamaan \ref{eq:deret-taylor-b}, maka deret Taylor yang kita gunakan adalah deret Taylor orde 0, dan Persamaan \ref{eq:deret-taylor-b} menjadi:
 
-$$ f(x + \Delta x) = f(x) + R_0 \tag{3}$$
+$$ f(x + \Delta x) = f(x) + R_0 $$
 
 dengan:
-$$ R_0 = O(\Delta x) = \dfrac{\varDelta x}{1!}f'\left(x\right)+\dfrac{\varDelta x^{2}}{2!}f''\left(x\right)+\cdots+\dfrac{\varDelta x^{n}}{n!}f^{\left(n\right)}\left(x\right)+\cdots \tag{4}$$
+
+$$ R_0 = O(\Delta x) = \dfrac{\varDelta x}{1!}f'\left(x\right)+\dfrac{\varDelta x^{2}}{2!}f''\left(x\right)+\cdots+\dfrac{\varDelta x^{n}}{n!}f^{\left(n\right)}\left(x\right)+\cdots \label{eq:R0} $$
 
 $ R_0 = O(\Delta x) $ adalah galat pemotongan (*truncating error*) yang berorde 1. Jika kita melanjutkan deret Taylor hingga suku ke-2, maka orde deret taylor tersebut adalah 1 dengan persamaan:
 
-$$ f(x + \Delta x) = f(x) + \dfrac{\varDelta x}{1!}f'\left(x\right) + R_1 \tag{4}$$
+$$ f(x + \Delta x) = f(x) + \dfrac{\varDelta x}{1!}f'\left(x\right) + R_1 \label{eq:R1} $$
 
 dengan:
 
-$$ R_1 = O(\Delta x^2) = \dfrac{\varDelta x^{2}}{2!}f''\left(x\right)+\cdots+\dfrac{\varDelta x^{n}}{n!}f^{\left(n\right)}\left(x\right)+\cdots \tag{5}$$
+$$ R_1 = O(\Delta x^2) = \dfrac{\varDelta x^{2}}{2!}f''\left(x\right)+\cdots+\dfrac{\varDelta x^{n}}{n!}f^{\left(n\right)}\left(x\right)+\cdots $$
 
 
 $ R_1 = O(\Delta x^2) $ adalah galat pemotongan yang berorde 2. Dan seterusnya.
 
-Mungkin kita berpikiran kalau bisa kita
 
 
 ## Contoh 2
@@ -73,20 +74,20 @@ Seperti pada Contoh 1, estimasilah kecepatan pada titik yang sama menggunakan de
 Dengan data yang diperoleh dari jawaban contoh 1, kita dapatkan:
 
 **Orde ke-0**
- $$ f(1 + 1) = f(2) = f(1) = 1.8$$
+ $$ f(1 + 1) = f(2) = f(1) = 1.8 \notag$$
 
  dengan kesalahan absolut sejati (*true relative error*) $ \epsilon_t = 43.75 \% $.
 
  **Orde ke-1**
 
- $$ f(1 + 1) = f(2) = f(1) + f'(1) \Delta x = 3.4$$
+ $$ f(1 + 1) = f(2) = f(1) + f'(1) \Delta x = 3.4 \notag$$
 
 
  dengan kesalahan absolut sejati (*true relative error*) $ \epsilon_t = 6.25 \% $. 
 
  **Orde ke-2**
 
- $$ f(1 + 1) = f(2) = f(1) + f'(1) \Delta x + {f''(1) \Delta x^2 \over 2 !} = 3.2$$
+ $$ f(1 + 1) = f(2) = f(1) + f'(1) \Delta x + {f''(1) \Delta x^2 \over 2 !} = 3.2 \notag$$
 
  dengan kesalahan absolut sejati (*true relative error*) $ \epsilon_t = 0.0 \% $. 
 
@@ -147,7 +148,7 @@ ax.plot(x, y_2)
 
 
 
-    [<matplotlib.lines.Line2D at 0x22d9a8daf88>]
+    [<matplotlib.lines.Line2D at 0x2414a2a6488>]
 
 
 
@@ -163,10 +164,13 @@ Pada Contoh 1 dan 2 kita mengestimasi persamaan dengan $\Delta x = 1$, seandainy
 
 
 ```python
-dx = [Dx/2**i for i in range(0,10)] # nilai x kita perkecil menjadi separuh pada tiap entry list --> dx = [1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0.0078125, 0.00390625, 0.001953125]
+dx = [Dx/2**i for i in range(0,10)] # nilai x kita perkecil menjadi separuh pada tiap entry list
+                                    #--> dx = [1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 
+                                    # 0.0078125, 0.00390625, 0.001953125]
 dx = np.array(dx) # merubah python list menjadi numpy array untuk keperluan numerik
 x0 = 1
-x1 = x0+dx  # x1 = x0 + dx = [1.5, 1.25, 1.125, 1.0625, 1.03125, 1.015625, 1.0078125, 1.00390625, 1.001953125]
+x1 = x0+dx  # x1 = x0 + dx = [1.5, 1.25, 1.125, 1.0625, 1.03125, 1.015625, 1.0078125, 1.00390625, 
+            # 1.001953125]
 
 # y eksak
 y_e = -0.2*x1**2 + 2*x1 
@@ -282,7 +286,7 @@ e_1 = abs(y_e-y_1)*100/y_e
 
 &nbsp;
 
-Pada tabel di atas, e_0 dan e_1 menunjukkan galat pada deret taylor orde ke-0 dan ke-1 secara berturut-turut. jia kita perhatikan, saat dx di perkecil menajadi setengah, maka galat pada deret Taylor orde ke-0 akan mengecil menjadi $\pm $ separuhnya, sedangkan  pada deret Taylor orde ke-1 akan mengecil menjadi $\pm$ 0.25. Hal ini sesuai dengan Persamaan 4 dan 5, karena yang paling berpengaruh pada galat adalah pangkat pada $\Delta x$ suku pertamanya. Sedangkan ketidak tepatan pengecilan galat menjadi separuh dan seperempat adalah kontribusi variabal pada suku pertama selain $\Delta x$ dan suku-suku tidak hingga setelahnya.  
+Pada tabel di atas, e_0 dan e_1 menunjukkan galat pada deret taylor orde ke-0 dan ke-1 secara berturut-turut. jia kita perhatikan, saat dx di perkecil menajadi setengah, maka galat pada deret Taylor orde ke-0 akan mengecil menjadi $\pm $ separuhnya, sedangkan  pada deret Taylor orde ke-1 akan mengecil menjadi $\pm$ 0.25. Hal ini sesuai dengan Persamaan \ref{eq:R0} dan \ref{eq:R1}, karena yang paling berpengaruh pada galat adalah pangkat pada $\Delta x$ suku pertamanya. Sedangkan ketidak tepatan pengecilan galat menjadi separuh dan seperempat adalah kontribusi variabal pada suku pertama selain $\Delta x$ dan suku-suku tidak hingga setelahnya.  
 
 ## Kesimpulan
 
