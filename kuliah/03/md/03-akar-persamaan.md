@@ -10,4 +10,4 @@ identifier: page
 
 File excel perkuliahan bisa  di-[download di sini][1]
 
-[1]:{{ site.url }}{{site.baseurl}}/kuliah/02/files/taylor-series.xlsx
+[1]:{{ site.url }}{{site.baseurl}}/kuliah/03/files/03.xlsx
