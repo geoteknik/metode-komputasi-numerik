@@ -1,10 +1,3 @@
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-import math
-```
-
 # Akar-akar persamaan
 
 Akar persamaan adalah nilai-nilai variabel yang memenuhi suatu persamaan matematika. Persamaan matematika merupakan ungkapan yang menyatakan kesetaraan (*equal*) antara suatu ekspresi dengan nilai tertentu. Sebagai contoh misalnya kita diminta untuk mencari nilai *x* yang memenuhi persamaan $f(x) = ax + c$. Semua nilai *x* yang memenuhi persamaan tersebut adalah akar-akar persamaan.  Setiap persamaan matematika memiliki akar atau solusi yang mungkin berupa bilangan riil atau kompleks. Penyelesaian akar persamaan ini memiliki banyak aplikasi dalam berbagai bidang, termasuk matematika, fisika, dan teknik.
@@ -28,30 +21,6 @@ $$ f(x) = 2x^2 - 5x + 1 \notag $$
 
 Persamaan tersebut cukup susah diselesaikan dengan cara faktorisasi dan substitusi, cara yang paling mudah adalah dengan menggambarkan kurva persamaan tersebut. Pertama-tama Kita cari nilai *x* dan *f(x)* yang memenuhi persamaan di atas, lalu nilai-nilai tersebut kita plotkan pada sebuah grafik:
 
-
-
-```python
-# Grafik
-x = np.linspace(0,3, 100)
-y = 2*x**2 - 5*x + 1 
-
-fig, ax = plt.subplots()
-ax.plot(x, y)
-# ax.plot(x, y0, 'black', linewidth=0.5)
-plt.axhline(0, color='black', linewidth=0.75)
-plt.axvline(0, color='black', linewidth=0.75)
-ax.grid(which='major', linewidth=0.5)
-ax.minorticks_on()
-ax.grid(which='minor', linewidth=0.1)
-plt.xlabel('x')
-plt.ylabel('f(x)')
-
-
-x1 = np.linspace(0,3, 10)
-y1 = 2*x1**2 - 5*x1 + 1 
-data = pd.DataFrame({'x':x1, 'y':y1})
-data
-```
 
 
 
@@ -136,7 +105,7 @@ data
 
 
 
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_2_1.png)
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_1_1.png)
 
 
 Dari grafik tersebut kita bisa mengetahui bahwa persamaan tersebut mempunyai dua akar yang bernilai sekitar $\pm$ 0.2 dan $\pm$ 2.3. Meskipun kita dengan mudah mendapatkan nilai ancer-ancer dari akar persamaan dengan metode grafik, tetapi kita sukar menentukan nilai tepatnya. Untuk mengatasi masalah ini, kita nanti akan menggunakan metode numerik.
@@ -150,93 +119,29 @@ Salah satu cara dalam menentukan akar persamaan, adalah kita menebak dua nilai $
 Pada gambar selain c dan d, nilai $f(x_1)$ dan $f(x_2)$ mempunyai tanda yang sama. Hal ini menunjukkan bahwa pada rentang $x_1$ dan $x_2$ bisa ada akar atau tidak sama sekali, jika rentang tersebut mempunyai akar, maka akarnya akan genap.
 
 
-```python
-# Grafik
-
-
-def plot(x, y, style='-'):
-    fig, ax = plt.subplots()
-    # ax.plot(x, y0, 'black', linewidth=0.5)
-    plt.axhline(0, color='black', linewidth=0.75)
-    plt.axvline(0, color='black', linewidth=0.75)
-    ax.grid(which='major', linewidth=0.5)
-    ax.minorticks_on()
-    ax.grid(which='minor', linewidth=0.1)
-    plt.xlabel('x')
-    plt.ylabel('f(x)')
-    ax.plot(x, y, style)
-    return fig, ax
-# a
-x = np.linspace(0,3, 50)
-y = (x-0.5) * (x-2) 
-fig, ax = plot(x, y,'-')
-ax.axvline(0.2, color='red', linestyle="--", linewidth=0.75)
-ax.axvline(2.5, color='red', linestyle="--", linewidth=0.75) 
-plt.title('(a)', y=-0.25 )
-
-# b
-y1 = 2*x**2 - 5*x + 5 
-fig, ax = plot(x, y1)
-ax.axvline(0.2, color='red', linestyle="--", linewidth=0.75)
-ax.axvline(2.5, color='red', linestyle="--", linewidth=0.75)
-plt.title('(b)', y=-0.25 )
-
-# c
-y2 = (x-1) * (x-7) 
-fig, ax = plot(x, y2)
-ax.axvline(0.2, color='red', linestyle="--", linewidth=0.75)
-ax.axvline(2.5, color='red', linestyle="--", linewidth=0.75)
-plt.title('(c)', y=-0.25 )
-
-# d
-y2 = (x-2) * (x-2) * (x-2)
-fig, ax = plot(x, y2)
-ax.axvline(0.2, color='red', linestyle="--", linewidth=0.75)
-ax.axvline(2.5, color='red', linestyle="--", linewidth=0.75)
-plt.title('(d)', y=-0.25 )
-
-# e
-x = np.linspace(1.5,3.5, 50)
-y3 = (x-2)*(x-2)*(x-3)
-fig, ax = plot(x, y3)
-ax.axvline(0.2, color='red', linestyle="--", linewidth=0.75)
-ax.axvline(2.5, color='red', linestyle="--", linewidth=0.75)
-plt.title('(e)', y=-0.25 )
-
- 
-```
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_4_0.png)
 
 
 
-
-    Text(0.5, -0.25, '(e)')
-
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_4_1.png)
 
 
 
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_5_1.png)
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_4_2.png)
 
 
 
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_5_2.png)
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_4_3.png)
 
 
 
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_5_3.png)
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_4_4.png)
 
 
+<!-- Sebagai contoh
 
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_5_4.png)
+Metode iterasi juga merupakan metode yang sering digunakan dalam menyelesaikan persamaan. Metode ini melibatkan pengulangan proses untuk mencari akar persamaan. Metode iterasi terutama digunakan untuk menyelesaikan persamaan yang tidak dapat diselesaikan dengan cara yang sederhana. Dalam metode ini, kita akan memulai dengan nilai awal x, kemudian mengulangi proses untuk mencari nilai x yang lebih dekat dengan nilai sebenarnya. Proses ini dilakukan sampai nilai x yang diperoleh sudah cukup mendekati nilai sebenarnya.
 
-
-
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_5_5.png)
-
-
-Sebagai contoh
-
-<!-- Metode iterasi juga merupakan metode yang sering digunakan dalam menyelesaikan persamaan. Metode ini melibatkan pengulangan proses untuk mencari akar persamaan. Metode iterasi terutama digunakan untuk menyelesaikan persamaan yang tidak dapat diselesaikan dengan cara yang sederhana. Dalam metode ini, kita akan memulai dengan nilai awal x, kemudian mengulangi proses untuk mencari nilai x yang lebih dekat dengan nilai sebenarnya. Proses ini dilakukan sampai nilai x yang diperoleh sudah cukup mendekati nilai sebenarnya.
- -->
 Selain metode-metode di atas, terdapat juga metode numerik lainnya yang dapat digunakan untuk menyelesaikan persamaan. Beberapa contoh metode numerik tersebut adalah metode eliminasi Gauss, metode eliminasi Gauss-Jordan, dan metode interpolasi. Metode numerik ini lebih kompleks dan sering digunakan dalam perhitungan yang membutuhkan presisi yang tinggi.
 
 Dalam kesimpulannya, penyelesaian akar persamaan adalah proses untuk menemukan nilai variabel yang memenuhi persamaan matematika. Ada banyak metode yang dapat digunakan untuk menyelesaikan persamaan, termasuk metode faktorisasi, metode substitusi, dan metode iterasi. Dalam menyelesaikan persamaan, kita harus mempertimbangkan faktor-fakt-faktor seperti bentuk persamaan, jenis persamaan, dan kemungkinan solusi yang mungkin. Metode yang digunakan tergantung pada situasi dan kondisi yang sedang dihadapi. Metode numerik yang lebih kompleks sering digunakan dalam perhitungan yang membutuhkan presisi yang tinggi, sementara metode sederhana seperti faktorisasi dan substitusi dapat digunakan dalam kasus yang lebih mudah.
@@ -270,4 +175,4 @@ Dalam beberapa situasi, akar persamaan dapat digunakan untuk memodelkan dan memp
 Dalam kesimpulan, akar persamaan adalah nilai-nilai yang dapat digunakan untuk menggantikan variabel dalam persamaan sehingga persamaan menjadi benar. Untuk menyelesaikan persamaan dan mencari akar persamaan, dibutuhkan pemahaman yang kuat tentang berbagai jenis persamaan dan metode yang digunakan untuk menyelesaikannya. Akar persamaan dapat memiliki nilai riil atau kompleks dan dapat digunakan untuk memprediksi dan memodelkan fenomena di dunia nyata.
 
 
-
+ -->
