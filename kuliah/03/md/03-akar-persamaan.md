@@ -8,6 +8,9 @@ identifier: page
 {% include_relative 03-01-akar-persamaan-pendahuluan-txt.md %}
 {% include_relative 03-02-akar-persamaan-bracket-method-txt.md %}
 
-File excel perkuliahan bisa  di-[download di sini][1]
+---
 
-[1]:{{ site.url }}{{site.baseurl}}/kuliah/03/files/03.xlsx
+*File* perkuliahan: 
+
+<a class="btn btn-outline-primary" href ="{{ site.url }}{{site.baseurl}}/kuliah/03/files/03.xlsx"> excel </a>
+ 

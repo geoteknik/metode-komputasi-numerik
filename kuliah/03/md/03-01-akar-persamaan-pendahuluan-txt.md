@@ -21,8 +21,7 @@ $$ f(x) = 2x^2 - 5x + 1 \notag $$
 
 Persamaan tersebut cukup susah diselesaikan dengan cara faktorisasi dan substitusi, cara yang paling mudah adalah dengan menggambarkan kurva persamaan tersebut. Pertama-tama Kita cari nilai *x* dan *f(x)* yang memenuhi persamaan di atas, lalu nilai-nilai tersebut kita plotkan pada sebuah grafik:
 
-
-
+&nbsp;
 
 
 <div>
@@ -104,9 +103,14 @@ Persamaan tersebut cukup susah diselesaikan dengan cara faktorisasi dan substitu
 
 
 
+&nbsp;
 
-![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_1_1.png)
 
+
+![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_1_2.png)
+
+
+&nbsp;
 
 Dari grafik tersebut kita bisa mengetahui bahwa persamaan tersebut mempunyai dua akar yang bernilai sekitar $\pm$ 0.2 dan $\pm$ 2.3. Meskipun kita dengan mudah mendapatkan nilai ancer-ancer dari akar persamaan dengan metode grafik, tetapi kita sukar menentukan nilai tepatnya. Untuk mengatasi masalah ini, kita nanti akan menggunakan metode numerik.
 
@@ -117,6 +121,8 @@ Dari grafik tersebut kita bisa mengetahui bahwa persamaan tersebut mempunyai dua
 Salah satu cara dalam menentukan akar persamaan, adalah kita menebak dua nilai $x_1$ dan $x_2$ lalu kita cari nilai $f(x_1)$ dan $f(x_2)$ (lihat gambar). Secara umum, jika fungsi tersebut kontinyu pada rentang $x_1 - x_2$, maka jika $f(x1)$ berlawanan tanda dengan $f(x_2)$, maka di antara rentang tersebut terdapat minimum satu akar, atau beberapa akar yang jumlahnya ganjil (lihat gambar c dan d). Meskipun pada Gambar(c) terlihat terdapat satu akar, sebenarnya pada kurva tersebut terdapat tiga akar kembar $x = 2$. Akar kembar membuat garis singgung kurva menjadi nol (sejajar sumbu x), sehingga akan timbul *inflection point*. Semakin banyak akar yang sama, maka kurva yang dibentuk disekitar titik tersebut akan semakin datar.
 
 Pada gambar selain c dan d, nilai $f(x_1)$ dan $f(x_2)$ mempunyai tanda yang sama. Hal ini menunjukkan bahwa pada rentang $x_1$ dan $x_2$ bisa ada akar atau tidak sama sekali, jika rentang tersebut mempunyai akar, maka akarnya akan genap.
+
+&nbsp;
 
 
 ![png](03-01-akar-persamaan-pendahuluan-txt_files/03-01-akar-persamaan-pendahuluan-txt_4_0.png)
