@@ -14,6 +14,15 @@ sidecontent: |
     </div>
 ---
 # Deskripsi Mata Kuliah 
+<div class="card"> 
+    <div class="card-header">
+        Disclaimer
+    </div>
+    <div class="card-body">
+        <!-- <h5 class="card-title">Disclaimer</h5> -->
+        <p class="card-text">Mata kuliah ini tidak memuat penggunaan software komersial untuk menyelesaikan permasalahan numerik, mata kuliah ini memuat aplikasi python untuk menyelesaikan permasalahan metode numerik secara umum. Untuk aplikasi python/software komersial di bidang geoteknik, silahkan klik <a class="" href="{{ site.url }}/komputasi-geoteknik/"> di sini </a></p> 
+  </div>
+</div> 
 Mata kuliah ini bertujuan untuk mengenalkan mahasiswa kepada metode untuk menyelesaikan persamaan matematika menggunakan metode numerik. Permasalahan-permasalahan yang akan diselesaikan menggunakan metode numerik pada perkuliahan ini sebisa mungkin yang berhubungan dengan dunia ketekniksipilan. Materi kuliah ini terdiri dari:
 - Galat
 - Deret taylor
